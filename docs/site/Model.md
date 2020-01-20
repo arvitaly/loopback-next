@@ -137,9 +137,7 @@ persistence layer respects this constraint and configures underlying
 PersistedModel classes to enforce `strict` mode.
 
 LB4 supports creating a model that allows both well-defined but also arbitrary extra
-properties for **NoSQL** databases such as MongoDB. You need to disable `strict` mode in model settings through the CLI
-and tell TypeScript to allow arbitrary additional properties to be set on model
-instances.
+properties for **NoSQL** databases such as MongoDB. You need to disable `strict` mode in model settings. Besides modifying model settings directly, it can also be done through the CLI by setting `allowed free-from properties` to true. And tell TypeScript to allow arbitrary additional properties to be set on model instances.
 
 ```ts
 @model({settings: {strict: false}})
